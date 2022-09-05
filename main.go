@@ -26,6 +26,7 @@ func init() {
 	environmentError := godotenv.Load(".env")
 
 	if environmentError != nil {
+		log.Println(environmentError)
 		log.Fatal("Error loading environment variables")
 		return
 	}
